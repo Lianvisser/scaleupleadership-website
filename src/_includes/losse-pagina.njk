@@ -8,6 +8,20 @@ layout: basis.njk
     <hr class="rule">
     {%- if intro %}<p>{{ intro }}</p>{% endif %}
     {%- if hero_blok %}<div class="hero-extra">{{ hero_blok | safe }}</div>{% endif %}
+    {%- if hero_punten or hero_knop %}
+    <div class="hero-extra" style="margin-top:22px">
+      {%- if hero_punten %}
+      <ul class="bk-regels">
+        {%- for punt in hero_punten %}
+        <li>{{ punt }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- if hero_knop %}
+      <p><a class="pill-btn" href="{{ hero_knop_url or '/contact/' }}">{{ hero_knop }} <span class="arrow">&rarr;</span></a></p>
+      {%- endif %}
+    </div>
+    {%- endif %}
   </div>
   {%- if afbeelding %}
   <div class="page-hero-cover"><img src="{{ afbeelding }}" alt="{{ kop or titel }}"></div>
