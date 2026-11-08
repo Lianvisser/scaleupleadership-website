@@ -9,8 +9,8 @@ afbeelding: ''
 knop: ''
 knop_url: ''
 scanblok: false
-hero_blok: |
-  <p style="margin:22px 0 0"><a class="pill-btn" href="/contact/">Plan een kennismaking <span class="arrow">&rarr;</span></a></p>
+hero_knop: Plan een kennismaking
+hero_knop_url: /contact/
 ---
 
 <style>
